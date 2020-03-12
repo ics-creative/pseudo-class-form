@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+}
+
+p {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  position: relative;
+}
+p:focus-within .labelName {
+  transform: translateY(0) scale(0.8);
+}
+
+.formTitle {
+  margin-bottom: 2rem;
+}
+
+.labelName {
+  display: block;
+  order: 1;
+  transition: transform 0.2s;
+  transform: translateY(2rem) scale(1);
+  transform-origin: 0 100%;
+}
+
+input,
+textarea {
+  order: 2;
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  padding: 8px;
+  border-bottom: 1px solid #333333;
+}
+input:invalid,
+textarea:invalid {
+  box-shadow: none;
+}
+input:invalid ~ .errorMessage,
+textarea:invalid ~ .errorMessage {
+  display: block;
+  color: red;
+}
+input:invalid ~ .OKMessage,
+textarea:invalid ~ .OKMessage {
+  display: none;
+}
+input:valid ~ .errorMessage,
+textarea:valid ~ .errorMessage {
+  display: none;
+}
+input:valid ~ .OKMessage,
+textarea:valid ~ .OKMessage {
+  display: block;
+  color: green;
+}
+input::placeholder,
+textarea::placeholder {
+  opacity: 0;
+}
+input:placeholder-shown ~ .messageBox,
+textarea:placeholder-shown ~ .messageBox {
+  display: none;
+}
+input:not(:placeholder-shown) ~ .labelName,
+textarea:not(:placeholder-shown) ~ .labelName {
+  transform: translateY(0) scale(0.8);
+}
+
+textarea {
+  margin-top: 4px;
+  border: 1px solid #999;
+}
+textarea ~ .labelName {
+  padding-left: 8px;
+}
+
+.messageBox {
+  padding: 0 8px 8px 8px;
+  position: absolute;
+  bottom: -36px;
+  z-index: -1;
+  font-size: 0.9rem;
+}
+
+/*# sourceMappingURL=style.css.map */

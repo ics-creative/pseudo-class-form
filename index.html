@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="formTitle">お問い合わせフォーム</h1>
+      <form>
+        <fieldset>
+          <div class="formWrapper">
+            <p>
+              <input
+                type="text"
+                id="name"
+                class="input"
+                placeholder="お名前"
+                required
+              />
+              <label for="name" class="labelName">お名前 *</label>
+              <span class="errorMessage messageBox">必須項目です</span>
+              <span class="OKMessage messageBox">OKです！</span>
+            </p>
+            <p>
+              <input
+                type="email"
+                id="email"
+                class="input"
+                placeholder="メールアドレス"
+              />
+              <label for="email" class="labelName">メールアドレス</label>
+              <span class="errorMessage messageBox">正しい形式で入力してください</span>
+              <span class="OKMessage messageBox">OKです！</span>
+            </p>
+            <p>
+              <input
+                type="Password"
+                id="password"
+                class="input"
+                placeholder="パスワード"
+                pattern="^[0-9A-Za-z]+$"
+                minlength="6" maxlength="18"
+              />
+              <label for="password" class="labelName">パスワード（半角英数6文字以上18文字以下）</label>
+              <span class="errorMessage messageBox">正しい形式で入力してください</span>
+              <span class="OKMessage messageBox">OKです！</span>
+            </p>
+            <p>
+              <textarea
+                name="detail"
+                id="detail"
+                cols="30"
+                rows="10"
+                placeholder="お問い合わせ内容"
+                required
+              ></textarea>
+              <label for="detail" class="labelName">お問い合わせ内容 *</label>
+            </p>
+          </div>
+          <p class="required">* は必須事項</p>
+          <button id="submit">Submit</button>
+        </fieldset>
+      </form>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
