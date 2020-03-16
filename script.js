@@ -1,7 +1,7 @@
 validate();
 
 document.querySelectorAll("input,textarea").forEach(input => {
-  input.addEventListener("change", validate);
+  input.addEventListener("input", validate);
 });
 
 function buttonValidate() {

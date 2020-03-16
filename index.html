@@ -30,9 +30,10 @@
                 type="email"
                 id="email"
                 class="input"
+                required
                 placeholder="メールアドレス"
               />
-              <label for="email" class="labelName">メールアドレス</label>
+              <label for="email" class="labelName">メールアドレス *</label>
               <span class="errorMessage messageBox">正しい形式で入力してください</span>
               <span class="OKMessage messageBox">OKです！</span>
             </p>
@@ -41,11 +42,12 @@
                 type="Password"
                 id="password"
                 class="input"
+                required
                 placeholder="パスワード"
                 pattern="^[0-9A-Za-z]+$"
                 minlength="6" maxlength="18"
               />
-              <label for="password" class="labelName">パスワード（半角英数6文字以上18文字以下）</label>
+              <label for="password" class="labelName">パスワード（半角英数6文字以上18文字以下）*</label>
               <span class="errorMessage messageBox">正しい形式で入力してください</span>
               <span class="OKMessage messageBox">OKです！</span>
             </p>
