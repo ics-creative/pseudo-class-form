@@ -95,3 +95,25 @@ textarea {
   z-index: -1;
   font-size: 0.9rem;
 }
+
+.submitButton {
+  width: 120px;
+  height: 40px;
+  border: none;
+  background-color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  &:disabled {
+    background-color: #999;
+    color: #ddd;
+    cursor: not-allowed;
+  }
+  &:not(:disabled) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

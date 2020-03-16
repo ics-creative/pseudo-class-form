@@ -96,4 +96,24 @@ textarea ~ .labelName {
   font-size: 0.9rem;
 }
 
+.submitButton {
+  width: 120px;
+  height: 40px;
+  border: none;
+  background-color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.submitButton:disabled {
+  background-color: #999;
+  color: #ddd;
+  cursor: not-allowed;
+}
+.submitButton:not(:disabled):hover {
+  opacity: 0.8;
+}
+
 /*# sourceMappingURL=style.css.map */
