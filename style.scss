@@ -18,7 +18,6 @@ p {
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
-  position: relative;
   &:focus-within {
     .labelName {
       transform: translateY(0) scale(0.8);
