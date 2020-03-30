@@ -50,7 +50,6 @@ textarea {
     box-shadow: none;
     & ~ .errorMessage {
       display: block;
-      color: red;
     }
     & ~ .OKMessage {
       display: none;
@@ -62,11 +61,13 @@ textarea {
     }
     & ~ .OKMessage {
       display: block;
-      color: green;
     }
   }
   &::placeholder {
-    opacity: 0;
+    color: transparent;
+  }
+  &::-webkit-input-placeholder {
+    color: transparent;
   }
   &:placeholder-shown {
     & ~ .messageBox {
@@ -94,6 +95,12 @@ textarea {
   bottom: -36px;
   z-index: -1;
   font-size: 0.9rem;
+  &.errorMessage{
+    color: red;
+  }
+  &.OKMessage{
+    color: green;
+  }
 }
 
 .submitButton {

@@ -52,7 +52,6 @@ textarea:invalid {
 input:invalid ~ .errorMessage,
 textarea:invalid ~ .errorMessage {
   display: block;
-  color: red;
 }
 input:invalid ~ .OKMessage,
 textarea:invalid ~ .OKMessage {
@@ -65,11 +64,14 @@ textarea:valid ~ .errorMessage {
 input:valid ~ .OKMessage,
 textarea:valid ~ .OKMessage {
   display: block;
-  color: green;
 }
 input::placeholder,
 textarea::placeholder {
-  opacity: 0;
+  color: transparent;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: transparent;
 }
 input:placeholder-shown ~ .messageBox,
 textarea:placeholder-shown ~ .messageBox {
@@ -94,6 +96,12 @@ textarea ~ .labelName {
   bottom: -36px;
   z-index: -1;
   font-size: 0.9rem;
+}
+.messageBox.errorMessage {
+  color: red;
+}
+.messageBox.OKMessage {
+  color: green;
 }
 
 .submitButton {
