@@ -8,6 +8,6 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "sass": "^1.26.1"
+    "sass": "1.26.3"
   }
 }
