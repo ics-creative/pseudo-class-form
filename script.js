@@ -4,7 +4,7 @@
 const validate = () => {
   const validForm = document.querySelector("form:valid");
   const submitButton = document.querySelector("#submit");
-  submitButton.disabled = validForm == null;
+  submitButton.disabled = validForm === null;
 };
 
 // 初期読み込み時に実行
